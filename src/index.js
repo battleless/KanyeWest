@@ -29,14 +29,6 @@ for (const file of commands) {
 	client.commands.set(command.data.name, command);
 }
 
-client.components = new Collection();
-const components = fs.readdirSync('./interactions/components').filter(file => file.endsWith('.js'));
-
-for (const file of components) {
-	const component = require('./interactions/components/' + file);
-	client.components.set(component.id, component);
-}
-
 const events = fs.readdirSync('./events').filter(file => file.endsWith('.js'));
 
 for (const file of events) {
