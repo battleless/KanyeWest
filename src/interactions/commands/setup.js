@@ -5,6 +5,7 @@ module.exports = {
     data: {
         name: 'setup',
         description: 'Manages the Kayne West quotes system.',
+        default_member_permissions: 32,
         options: [
             {
                 name: 'set',
