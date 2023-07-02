@@ -7,8 +7,10 @@ module.exports = {
     run: async (client) => {
         console.log(`${client.user.username} is ready!`);
 
-        cron.schedule('* * * * *', async () => {
+        cron.schedule('0 0 * * *', async () => {
             await sendKanyeQuote(client);
+        }, {
+            timezone: 'America/New_York'
         });
     }
 }
